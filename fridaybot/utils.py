@@ -55,13 +55,6 @@ def command(**args):
                 except:
                     pass
 
-                try:
-                    CMD_LIST[file_test].append(cmd)
-                except:
-                    CMD_LIST.update({file_test: [cmd]})
-            except:
-                pass
-
         if allow_sudo:
             args["from_users"] = list(Config.SUDO_USERS)
             # Mutually exclusive with outgoing (can only set one of either).
